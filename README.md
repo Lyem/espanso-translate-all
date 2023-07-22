@@ -1,5 +1,23 @@
 # espanso-translate-all
 
+### Installation
+
+`pip install deep-translator`
+
+### Config
+
+```
+global_vars:
+  - name: "SCRIPT_PATH"
+    type: "echo"
+    params:
+      echo: '.config/espanso/match/packages/translate-all/scripts/trans.py'
+  - name: "PYTHON"
+    type: "echo"
+    params:
+      echo: ".asdf/installs/python/3.11.4/bin/python"
+```
+
 ### How to use
 
 `:t{write what you want to translate}:` (will be translated into English regardless of the language in which you write)
@@ -142,22 +160,3 @@
 | yiddish               | yi       |
 | yoruba                | yo       |
 | zulu                  | zu       |
-
-
-### Installation
-
-`pip install deep-translator`
-
-### Config
-
-```
-global_vars:
-  - name: "SCRIPT_PATH"
-    type: "echo"
-    params:
-      echo: '.config/espanso/match/packages/translate-all/scripts/trans.py'
-  - name: "PYTHON"
-    type: "echo"
-    params:
-      echo: ".asdf/installs/python/3.11.4/bin/python"
-```
