@@ -4,6 +4,8 @@
 
 `pip install deep-translator`
 
+`espanso install translate-all --git https://github.com/Lyem/espanso-translate-all --external`
+
 ### Config
 
 ```
