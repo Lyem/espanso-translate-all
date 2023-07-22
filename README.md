@@ -2,8 +2,6 @@
 
 ### How to use
 
-:t{escreva o que deseja traduzir}:
-
 `:t{write what you want to translate}:` (will be translated into English regardless of the language in which you write)
 `:ta{write the code of the language to which you want to translate}{write what you want to translate}:`
 
