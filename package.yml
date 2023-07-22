@@ -1,0 +1,35 @@
+name: translate-all
+parent: default
+
+global_vars:
+  - name: "SCRIPT_PATH"
+    type: "echo"
+    params:
+      echo: '.config/espanso/match/packages/translate-all/scripts/trans.py'
+  - name: "PYTHON"
+    type: "echo"
+    params:
+      echo: ".asdf/installs/python/3.11.4/bin/python"
+
+matches:
+  - regex: ":t\\{(?P<p>.*?)\\}:"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args: 
+            - '{{PYTHON}}'
+            - '{{SCRIPT_PATH}}'
+            - '{{p}}'
+  - regex: ":ta\\{(?P<l>.*?)\\}\\{(?P<p>.*?)\\}:"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args: 
+            - '{{PYTHON}}'
+            - '{{SCRIPT_PATH}}'
+            - '{{p}}'
+            - '{{l}}'
